@@ -1,21 +1,10 @@
-//Use Express middleware to manage incoming requests and 
-//dispatch them to corresponding behaviours
-const express = require('express');
+const express = require('express')
+const path = require('path')
+const PORT = process.env.PORT || 5000
 
-//Create an application 
-const app = express();
-
-//Send back a raw message every time the server got an 
-//incoming request
-app.get('*', (req, res) => {
-
-    res.send('Express response');
-
-});
-
-//Listen on the port 3000
-app.listen(3000);
-
-//Print out where the server is
-console.log("Server is running on port: 3000");
-
+express()
+  .use(express.static(path.join(__dirname, 'public')))
+  .set('views', path.join(__dirname, 'views'))
+  .set('view engine', 'ejs')
+  .get('/', (req, res) => res.render('pages/index'))
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`))

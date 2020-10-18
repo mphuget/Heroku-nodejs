@@ -1,0 +1,26 @@
+{
+  "name": "heroku-nodejs",
+  "version": "1.0.0",
+  "description": "Provide a small example of a Node.js server deployed on Heroku",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mphuget/Heroku-nodejs.git"
+  },
+  "author": "Marc-Philippe Huget",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mphuget/Heroku-nodejs/issues"
+  },
+  "homepage": "https://github.com/mphuget/Heroku-nodejs#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "engines": {
+    "node": "10.x"
+  }
+}
